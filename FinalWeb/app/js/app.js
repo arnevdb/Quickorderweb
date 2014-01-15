@@ -1,11 +1,14 @@
 'use strict';
 
-// Declare app level module which depends on filters, and services
+/**
+ * De module van de website, Dit is de "root" van alles ondergaande
+ * Hier worden uitgaande libraries geinclude en zo kan de rest van de website de functionaliteiten gebruiken
+ * De routes naar de verschillende pagina's worden hier gedecladeerd.
+ */
 angular.module('myApp',
       ['myApp.config', 'myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers', 'firebase', 'ngRoute', 'waitForAuth']
    )
 
-   // configure views; note the authRequired parameter for authenticated pages
    .config(['$routeProvider', function($routeProvider) {
       $routeProvider.when('/order', {
          templateUrl: 'partials/order.html',
@@ -19,7 +22,7 @@ angular.module('myApp',
       });
 
       $routeProvider.when('/menu', {
-         authRequired: true, // must authenticate before viewing this page
+         authRequired: true,
          templateUrl: 'partials/menu.html',
          controller: 'MenuCtrl'
       });

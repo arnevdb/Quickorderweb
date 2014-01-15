@@ -1,6 +1,9 @@
 'use strict';
 
-/* Controllers */
+/**
+ * De controllers zorgen voor de logica van de website
+ * Voor elke pagina is er een controller voorzien.
+ */
 
 angular.module('myApp.controllers', [])
    .controller('HomeCtrl', ['$scope', 'syncData', function($scope, syncData) {
@@ -10,8 +13,7 @@ angular.module('myApp.controllers', [])
   .controller('ClubCtrl', ['$scope', 'syncData','$location', function($scope, syncData,$location) {
 
 
-      // constrain number of messages by limit into syncData
-      // add the array into $scope.messages
+
       $scope.clubs = syncData('clubs',10);
 
 
@@ -48,10 +50,8 @@ var i = 1;
            $location.path('/menu');
 
 
-         //  $scope.clubs[{name:club.name}].$set({selected:1});
 
         }
-      // add new messages to the list
 
    }])
 
@@ -68,11 +68,7 @@ var i = 1;
         }
 
 
-       /* $scope.reset = function(){
-            var total = new Firebase("https://quickbase.firebaseio.com/total");
 
-            total.update({price:0});
-        }*/
         $scope.printOrder = function(){
 
 
@@ -112,10 +108,7 @@ var i = 1;
 
 
                     })
-                   /* var total = new Firebase("https://quickbase.firebaseio.com/total");
-
-                    total.update({price:0});
-                    */$scope.orderlist=false;
+                  $scope.orderlist=false;
                     $scope.orderbtn=false;
 
 
@@ -199,7 +192,7 @@ $scope.menulist = function(){
         listclubs.on('child_added',function(snapshot){
              var data = snapshot.val();
             if(data.selected == 1){
-               // $scope.drinks = syncData('drinks/'+data.name+'');
+
                 $scope.data = data;
 
                 var drink = new Firebase("https://quickbase.firebaseio.com/drinks/"+data.name);
@@ -330,7 +323,7 @@ $scope.menulist = function(){
                   $scope.err = err? err + '' : null;
                }
                else {
-                  // must be logged in before I can write to my profile
+
                   $scope.login(function() {
                      loginService.createProfile(user.uid, user.email);
                   });
