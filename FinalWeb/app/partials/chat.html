@@ -1,0 +1,22 @@
+
+
+<h2>Choose your club...</h2>
+
+
+
+        <div class="list-group" ng-show="clubs">
+
+            <a ng-click="goDrink(club)" ng-repeat="club in clubs | orderByPriority | reverse" class="list-group-item">{{club.name}}</a>
+
+
+
+
+        </div>
+        <!--
+<ul id="club" ng-show="clubs">
+    <li ng-repeat="club in clubs | orderByPriority | reverse"><button  ng-click="goDrink(club)"> {{club.name}}</button></li>
+</ul>-->
+
+      <div class="modal-footer" >
+<button  class="btn btn-primary" ng-click="logout()" >Logout</button>
+          </div>

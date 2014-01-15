@@ -1,0 +1,42 @@
+<h2>Order</h2>
+
+ <button ng-show="orderbtn" ng-click="printOrder()" class="btn btn-success">Confirmed!</button>
+
+
+<div ng-hide="orderlist" class="table-responsive">
+    <table  class="table">
+        <tr>
+            <th>
+                Name:
+            </th>
+
+            <th>
+                Amount:
+
+            </th>
+            <th>
+                Price:
+            </th>
+
+
+        </tr>
+        <tr ng-repeat="drink in drinksorder | orderByPriority| reverse">
+            <td>{{drink.name}}</td>
+            <td>{{drink.count}}</td>
+            <td><strong>€{{drink.totalprice}}</strong></td>
+
+        </tr>
+        <tr>
+            <td></td>
+
+            <td><strong>Total:</strong>
+            </td>
+            <td>€{{totalorder}}</td>
+        </tr>
+        <tr><td><button  class="btn btn-primary" ng-click="logout()" >Logout</button></td>
+
+        </tr>
+
+    </table>
+
+</div>

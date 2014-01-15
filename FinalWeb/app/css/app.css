@@ -1,0 +1,284 @@
+/* app css stylesheet */
+
+.hide {
+   display: none;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+
+  padding: 0 0 0.5em;
+}
+
+.list-group-item{
+    cursor:pointer;
+    width:30%;
+
+
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li:hover{
+
+    background-color:#000;
+
+}
+
+li {
+    float: left;
+
+    border-bottom-width: 0;
+    margin: 3px 3px 0px 3px;
+    padding: 10px 10px 0px 10px;
+    font-size:1.5em;
+    background-color: #fff;
+    color: #2a6496;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#mainView {
+
+    clear: both;
+    padding: 0 1em;
+}
+.active {
+    background-color: #FFF;
+    color: #000;
+}
+.table{
+    width:30%;
+
+}
+.list-group-item:hover{
+ color:#269abc;
+
+
+}
+
+.modal-footer{
+
+    width:10%;
+}
+
+#content{
+
+    margin: 20px auto;
+}
+.form{
+    width:30%;
+}
+{
+
+    width:40%;
+}
+#menuMain{
+
+
+
+
+
+
+}
+
+#mainMenu{
+    float: left;
+    width: 100%;
+
+    padding: 100px 100px 100% 100px;
+    background-color:#269abc;
+}
+
+#main {
+    float: left;
+    width: 100%;
+
+    padding: 100px 100px 100% 100px;
+    background-color:#269abc;
+}
+
+#menu ul {
+    margin: 0;
+
+    list-style: none;
+    color: #333;
+
+    overflow: hidden;
+}
+
+#menu li {
+    display:inline-block;
+}
+
+body{
+    padding: 0px;
+    margin:0px;
+    font-family: Cambria, Georgia, serif;
+    line-height: 1.2em;
+    font-size:100%;
+    max-width:1920px;
+    max-height:1080px;
+
+
+}
+
+#header, #menu, #footer, h1, h2, h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#header {
+    color: #000;
+background-color:#333;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+    color: #399;
+    padding:0;
+    margin:0;
+    clear: both;
+    width: 100%;
+}
+#footer h3 {
+    padding: 20px 20px;
+}
+
+
+
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li.hide {
+   display: none;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+p.status {
+   color: red;
+}
+
+p.status.good, p.good {
+   color: green;
+}
+
+form label {
+   display: block;
+   margin: 15px 0;
+}
+
+form label span {
+   display: block;
+   font-weight: bold;
+}
+
+.error {
+   color: red;
+}
+
+fieldset {
+   float: left;
+   margin-right: 25px;
+   padding: 25px;
+}
+@media screen and (max-width: 480px) {
+    body{
+        font-size: 120%;
+    }
+    .form{
+        width:150%;
+    }
+    .sidebar{
+        margin: 0;
+        width:100%;
+    }
+    #menu li {
+        display:block;
+        border-bottom-color:#FFF;
+        border-bottom-style:solid;
+        border-bottom-width:1px;
+        text-align:center;
+        padding:5px;
+    }
+    #menu ul {
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .sidebar{
+        margin: 0 0 20px 1%;
+        clear:both;
+        width:98%;
+    }
+
+    #mainMenu{
+    clear:both;
+        width:100px;
+
+
+
+
+    }
+    .list-group-item{
+        width:130%;
+
+    }
+    .form{
+        width:130%;
+    }
+    #main {
+        clear:both;
+        width:100%;
+
+
+    }
+}
+    @media screen and (max-width: 1200px) and (orientation: landscape) {
+        .sidebar{
+            margin: 0 0 20px 1%;
+            clear:both;
+            width:98%;
+        }
+        .list-group-item{
+            width:100%;
+
+        }
+
+        .form{
+            width:100%;
+        }
+        #main {
+            clear:both;
+            width:100%;
+        }
+
+
+}
